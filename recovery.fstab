@@ -1,10 +1,22 @@
-# mount point	fstype    device    	[device2]
-
-/boot       mtd         boot
-/cache      yaffs2      cache
-/data       yaffs2      userdata
-/misc       mtd         misc
-/recovery   mtd         recovery
-/sdcard     vfat        /dev/block/mmcblk0p1        /dev/block/mmcblk0
-/system     yaffs2      system
-/sd-ext     ext4        /dev/block/mmcblk0p2
+#size_hint=164 
+/dev/block/mmcblk0p1 	/reserved	hidden	None                                                                                    	length=0     
+#size_hint=8   
+/dev/block/mmcblk0p2 	/panic   	raw   	None                                                                                    	length=0     
+#size_hint=32  
+/dev/block/mmcblk0p3 	/factory 	ext4  	nosuid,nodev,noatime,barrier=1,data=ordered                                             	length=0     
+#size_hint=128 
+/dev/block/mmcblk0p4 	/spare   	ext4  	defaults                                                                                	length=0     
+#size_hint=128 
+/dev/block/mmcblk0p5 	/config  	ext4  	nosuid,nodev,noatime,barrier=1,data=ordered                                             	length=0     
+#size_hint=768 
+/dev/block/mmcblk0p6 	/cache   	ext4  	nosuid,nodev,noatime,barrier=1,journal_async_commit,data=ordered                        	length=0     
+#size_hint=256 
+/dev/block/mmcblk0p7 	/logs    	ext4  	nosuid,nodev,barrier=1,journal_async_commit,data=ordered                                	length=0     
+#size_hint=1280
+/dev/block/mmcblk0p8 	/system  	ext4  	ro,noatime                                                                              	length=0     
+#size_hint=2048
+/dev/block/mmcblk0p9 	/data    	ext4  	nosuid,nodev,noatime,barrier=1,journal_async_commit,data=ordered,noauto_da_alloc,discard	length=-16384
+#size_hint=-1  
+/dev/block/mmcblk0p10	/sdcard  	vfat  	defaults                                                                                	length=-16384
+#size_hint=-1  
+/dev/block/mmcblk1p1 	/mnt/sdcard	vfat  	defaults                                                                                	length=0     
