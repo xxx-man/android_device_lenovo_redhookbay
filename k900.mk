@@ -3,11 +3,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product-if-exists, vendor/Lenovo/k900/k900-vendor.mk)
+$(call inherit-product-if-exists, vendor/lenovo/k900/k900-vendor.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/Lenovo/k900/overlay
+DEVICE_PACKAGE_OVERLAYS += device/lenovo/k900/overlay
 
-LOCAL_PATH := device/Lenovo/k900
+LOCAL_PATH := device/lenovo/k900
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
 else

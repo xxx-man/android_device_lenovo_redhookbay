@@ -8,7 +8,7 @@ PRODUCT_RELEASE_NAME := k900
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/Lenovo/k900/k900.mk)
+$(call inherit-product, device/lenovo/k900/k900.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := k900
